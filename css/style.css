@@ -1,5 +1,11 @@
 @import "https://unpkg.com/open-props/easings.min.css";
 
+@font-face {
+    font-family: "Manrope";
+    font-weight: 400;
+    src: url("../fonts/Manrope-Regular.ttf") format("ttf")
+}
+
 :root {
     /* spotify colors*/
     --spotify-green: #1ed760;
@@ -27,17 +33,69 @@ svg {
 
 /* global page styles */
 
-html {}
+html {
+    font-family: "Manrope", Helvetica, arial, sans-serif;
+}
 
 /* center everything */
 
-body {}
+body {
+    background-color: #121212;
+}
 
 /*
     Object: Button reset
     ---
     Small button reset object
 */
+
+.grid_container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.album {
+    max-width: 400px;
+    padding: 1.5rem;
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.icon--check {
+    color: #1ed760;
+}
+
+.album__title {
+    color: #ffffff;
+}
+
+.album__header {
+    margin-top: 1.5rem;
+    display: grid;
+    /* grid-template-columns: 9fr 1fr; */
+    grid-template-columns: 1fr 2rem; 
+    grid-template-rows: 1fr 1fr;
+    justify-items: start;
+    
+}
+
+.album__artist {
+    color: #b3b3b3;
+    grid-row-start: 2;
+}
+
+.album__action {
+    grid-row: span 2;
+}
+
+
+
+.toggle__icon {
+    width: 100%; 
+    
+}
+
 
 .button-reset {
     border: none;
